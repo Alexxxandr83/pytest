@@ -6,6 +6,7 @@ def test_get():
     with pytest.raises(IndexError):
         assert arrs.get([1, 2, 3], 1, "test") == 2
         assert arrs.get([], 0, "test") == "test"
+        assert arrs.get([1, 2, 3], -1, "test") == 'test'
 
 
 def test_slice():
